@@ -1,5 +1,36 @@
+# Dependencias
 node_modules/
 package-lock.json
-screenshot-*.png
+
+# Screenshots
+*.png
+screenshots/
+
+# Logs
 *.log
+npm-debug.log*
+
+# Variables de entorno (NO subir contraseñas a GitHub)
 .env
+.env.local
+.env.production
+
+# Configuración local (crear config.js a partir de config.example.js)
+config.js
+config-multitab.js
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Playwright
+test-results/
+playwright-report/
+playwright/.cache/

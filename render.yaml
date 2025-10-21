@@ -1,0 +1,21 @@
+services:
+  # Cron Job para ejecutar el bot todos los días a las 22:25
+  - type: cron
+    name: bot-reservas-yoga
+    env: docker
+    schedule: "25 22 * * *"  # Todos los días a las 22:25 (hora de Madrid)
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    envVars:
+      - key: EMAIL
+        sync: false
+      - key: PASSWORD
+        sync: false
+      - key: ACTIVIDADES
+        value: YOGA
+      - key: HORA_MINIMA
+        value: "19"
+      - key: HEADLESS
+        value: "true"
+      - key: TZ
+        value: Europe/Madrid

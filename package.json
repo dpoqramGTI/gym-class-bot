@@ -1,16 +1,22 @@
 {
   "name": "playwright-auto-reserva",
-  "version": "1.0.0",
-  "description": "Bot de reserva automática usando Playwright",
-  "main": "bot.js",
+  "version": "2.0.0",
+  "description": "Bot de reserva automática usando Playwright con estrategia multi-tab",
+  "main": "bot-multitab.js",
   "scripts": {
-    "start": "node bot.js",
-    "install-browsers": "npx playwright install chromium"
+    "start": "node bot-multitab.js",
+    "start:single": "node bot.js",
+    "install-browsers": "npx playwright install chromium",
+    "cron": "node cron-wrapper.js"
   },
-  "keywords": ["playwright", "automation", "reservas"],
+  "keywords": ["playwright", "automation", "reservas", "multi-tab", "cron"],
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "dependencies": {
-    "playwright": "^1.40.0"
+    "playwright": "^1.40.0",
+    "node-cron": "^3.0.3"
   }
 }
